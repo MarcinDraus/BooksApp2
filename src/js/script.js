@@ -1,4 +1,4 @@
-//'use strict';
+
 
 const booksListEl = document.querySelector('.books-list');
 
@@ -15,7 +15,7 @@ function  render(){
     //console.log(data,'data', book, 'book');
     //wświetl id="template-book" ,  <li class="book">
     const wrapper = Handlebars.compile(bookWrapper.innerHTML);
-    //załaduj do <li> część z tablicty dataSource.books - skąd wie którą{}?
+    //załaduj do <li> część z tablicty dataSource.books - skąd wie którą{}?- bo klamy {} oddzielają
     const generateHTML = wrapper(book);
     
     //wyświetl w postaci nowego <div> zawartość "<li> część z tablicty dataSource"
@@ -101,3 +101,16 @@ function filterBox(){
 }
 //filterBox();
 //initActions();
+// use rating called in displayBooks method to apply styles
+// applyRatingColor(rating){
+//   if (rating <= 6) {
+//     return 'linear-gradient(to bottom,  #fefcea 0%, #f1da36 100%)';
+//   } else if (rating > 6 && rating <= 8) {
+//     return 'linear-gradient(to bottom, #b4df5b 0%,#b4df5b 100%)';
+//   } else if (rating > 8 && rating <= 9) {
+//     return 'linear-gradient(to bottom, #299a0b 0%, #299a0b 100%)';
+//   } else if (rating > 9) {
+//     return 'linear-gradient(to bottom, #ff0084 0%,#ff0084 100%)';
+//   }
+// }
+// applyRatingColor();
